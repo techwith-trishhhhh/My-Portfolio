@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Trishnika Mondal</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Google Fonts (Poppins) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Link to external custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-slate-200 overflow-x-hidden relative selection:bg-cyan-500 selection:text-slate-900">
+
+    <!-- Background Decorative Orbs -->
+    <div class="orb w-72 h-72 bg-cyan-500 top-20 left-[-5%] md:left-[10%]"></div>
+    <div class="orb w-96 h-96 bg-purple-600 top-[40%] right-[-10%] md:right-[5%] animation-delay-2000"></div>
+    <div class="orb w-80 h-80 bg-emerald-500 bottom-20 left-[5%]"></div>
+
+    <!-- NAVIGATION BAR -->
+    <nav class="glass-nav fixed top-0 left-0 w-full z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <a href="#home" class="text-xl font-bold tracking-wider bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent hover:opacity-80 transition">
+                        &lt;Trishnika.Dev /&gt;
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="text-slate-300 hover:text-cyan-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                        <a href="#about" class="text-slate-300 hover:text-cyan-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
+                        <a href="#skills" class="text-slate-300 hover:text-cyan-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Skills</a>
+                        <a href="#projects" class="text-slate-300 hover:text-cyan-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Projects</a>
+                        <a href="#contact" class="text-slate-300 hover:text-cyan-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="inline-flex items-center justify-center p-2 rounded-md text-slate-400 hover:text-white hover:bg-slate-800 focus:outline-none">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden glass border-t border-white/5 px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="#home" class="text-slate-300 hover:text-cyan-400 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+            <a href="#about" class="text-slate-300 hover:text-cyan-400 block px-3 py-2 rounded-md text-base font-medium">About</a>
+            <a href="#skills" class="text-slate-300 hover:text-cyan-400 block px-3 py-2 rounded-md text-base font-medium">Skills</a>
+            <a href="#projects" class="text-slate-300 hover:text-cyan-400 block px-3 py-2 rounded-md text-base font-medium">Projects</a>
+            <a href="#contact" class="text-slate-300 hover:text-cyan-400 block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="min-h-screen flex items-center justify-center pt-16 relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full py-12">
+            <!-- Text Content -->
+            <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 text-xs sm:text-sm font-medium">
+                    <span class="flex h-2 w-2 relative">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
+                    </span>
+                    <span>Ready to Create & Code</span>
+                </div>
+                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                    <span class="block bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">Hi, I'm Trishnika Mondal.</span>
+                    <span class="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 text-2xl sm:text-3xl md:text-4xl font-bold mt-2">
+                        Aspiring Software Developer | Java & DSA Enthusiast | Future Full-Stack Developer
+                    </span>
+                </h1>
+                <p class="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0">
+                    Building scalable web applications, solving complex algorithmic problems, and crafting engaging digital experiences.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+                    <a href="#projects" class="px-8 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-cyan-600 hover:from-cyan-400 hover:to-cyan-500 text-slate-900 font-semibold shadow-lg glow-cyan transform hover:-translate-y-1 transition-all duration-300 text-center">
+                        View My Work
+                    </a>
+                    <a href="#contact" class="px-8 py-3 rounded-xl glass text-white font-semibold hover:bg-white/10 border border-white/10 transform hover:-translate-y-1 transition-all duration-300 text-center">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+
+            <!-- Profile Image Container -->
+            <div class="lg:col-span-5 flex justify-center items-center">
+                <div class="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 glass rounded-3xl glow-purple flex items-center justify-center overflow-hidden border border-white/10 group p-3">
+                    <!-- Rotating background lines inside graphic behind image -->
+                    <div class="absolute w-full h-full rounded-full border border-dashed border-cyan-500/20 animate-[spin_30s_linear_infinite]"></div>
+                    
+                    <!-- Profile Image Tag (Using Verbatim Filename to avoid renaming errors) -->
+                    <div class="w-full h-full rounded-2xl overflow-hidden relative z-10">
+                        <img src="WhatsApp Image 2026-05-04 at 11.46.08 PM.jpeg" alt="Trishnika Mondal" class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT ME SECTION -->
+    <section id="about" class="py-24 relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">About Me</h2>
+            <div class="h-1 w-20 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            <div class="lg:col-span-7 space-y-6">
+                <h3 class="text-2xl font-semibold text-cyan-400">Bridging Logic & Creativity</h3>
+                <p class="text-slate-300 leading-relaxed text-justify">
+                    Hi, I'm Trishnika Mondal. I'm currently pursuing my 4-year B.Tech journey at <strong>Techno Main Salt Lake (Batch 2025 - 2029)</strong> to dive deep into computer science and engineering. 
+                </p>
+                <p class="text-slate-300 leading-relaxed text-justify text-sm sm:text-base">
+                        My mathematical and computing core thrives heavily on mapping highly complex algorithmic structures, mastering multi-dimensional <strong>Data Structures and Algorithms (DSA)</strong> within Java environments, and configuring interactive full-stack modern network pipelines. Beyond pure computation, I possess deep technical fluency across agile development practices, code modularity, and operational layout automation systems.
+                    </p>
+                    <p class="text-slate-300 leading-relaxed text-justify text-sm sm:text-base">
+                        Concurrently, I operate heavily at the intersection of structural technical logic and advanced artistic engineering. As an expert multi-disciplinary creator, I hold deep industry-grade proficiency in high-fidelity professional "Video Sequencing & Post-Production, Cinematic Photography layouts, and Classical Fine Arts Drawing". This rare balance enables me to wire complex data mechanisms while building breathtaking, highly optimal UI/UX layouts.
+                    </p>
+                <div class="glass p-5 rounded-2xl border-l-4 border-purple-500 space-y-2">
+                    <h4 class="text-white font-medium flex items-center gap-2">
+                        <i class="fa-solid fa-music text-purple-400"></i> A Decade of Precision & Structural Rhythm
+                    </h4>
+                    <p class="text-sm text-slate-400">
+                        Having systematically trained in Vocal Musical Arts for over 10 years, I developed deep patience, structural focus, and precise operational rhythm. These exact sensory disciplines dictate my engineering workflow today, translating seamlessly into structuring highly clean, readable, and perfectly optimized software codebases.
+                    </p>
+                </div>
+            </div>
+
+            <div class="lg:col-span-5 glass p-6 sm:p-8 rounded-2xl border border-white/5 space-y-6">
+                <div class="relative w-72 h-72 md:w-80 md:h-80 mx-auto flex items-center justify-center rounded-full bg-gradient-to-tr from-purple-600 via-pink-500 to-cyan-400 p-[5px] shadow-[0_0_40px_rgba(6,182,212,0.4)] transition-transform duration-500 hover:scale-105">
+    <div class="w-full h-full bg-slate-950 rounded-full p-[3px] flex items-center justify-center">
+        <img src="profile image 2.jpeg" alt="Trishnika Mondal" class="w-full h-full object-cover rounded-full">
+    </div>
+</div>
+                <h3 class="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+                    <i class="fa-solid fa-graduation-cap text-cyan-400"></i> Education Timeline
+                </h3>
+                <div class="relative border-l-2 border-slate-700 ml-2 space-y-8 pb-2">
+                    <div class="relative pl-6">
+                        <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-cyan-400 border-4 border-[#0b0f19]"></div>
+                        <span class="text-xs font-mono text-cyan-400 font-bold">2025 - 2029</span>
+                        <h4 class="text-white font-medium text-base mt-1">B.Tech in Information Technology</h4>
+                        <p class="text-sm text-slate-400">Techno Main Salt Lake</p>
+                    </div>
+                    <div class="relative pl-6">
+                        <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-purple-500 border-4 border-[#0b0f19]"></div>
+                        <span class="text-xs font-mono text-purple-400 font-bold">2025 Completed</span>
+                        <h4 class="text-white font-medium text-base mt-1">Higher Secondary Education</h4>
+                        <p class="text-sm text-slate-400">Ramnagar Atul Vidyalaya</p>
+                    </div>
+                    <div class="relative pl-6">
+                        <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-emerald-500 border-4 border-[#0b0f19]"></div>
+                        <span class="text-xs font-mono text-emerald-400 font-bold">2023 Completed</span>
+                        <h4 class="text-white font-medium text-base mt-1">Madhyamik Education</h4>
+                        <p class="text-sm text-slate-400">Helan Saradamoni Balika Vidyalaya</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="py-24 glass border-y border-white/5 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Skills & Mastery</h2>
+                <div class="h-1 w-20 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="space-y-6">
+                    <h3 class="text-xl font-semibold text-cyan-400 mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-laptop-code"></i> Technical Stack & Tools
+                    </h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="glass p-4 rounded-xl border border-white/5 hover:border-cyan-500/30 transition-all duration-300">
+                            <span class="text-xs uppercase font-mono tracking-wider text-slate-400">Languages</span>
+                            <p class="text-white font-semibold mt-1">Java (Core + DSA)</p>
+                            <p class="text-white font-semibold">C Language</p>
+                        </div>
+                        <div class="glass p-4 rounded-xl border border-white/5 hover:border-cyan-500/30 transition-all duration-300">
+                            <span class="text-xs uppercase font-mono tracking-wider text-slate-400">Web Architecture</span>
+                            <p class="text-white font-semibold mt-1">HTML5 / CSS3 / Tailwind</p>
+                            <p class="text-white font-semibold">JavaScript (Full-Stack)</p>
+                        </div>
+                        <div class="glass p-4 rounded-xl border border-white/5 hover:border-purple-500/30 transition-all duration-300 sm:col-span-2">
+                            <span class="text-xs uppercase font-mono tracking-wider text-slate-400">Creative Production</span>
+                            <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-white font-semibold">
+                                <span><i class="fa-solid fa-video text-purple-400 mr-1"></i> Video Editing</span>
+                                <span><i class="fa-solid fa-palette text-purple-400 mr-1"></i> Drawing</span>
+                                <span><i class="fa-solid fa-camera text-purple-400 mr-1"></i> Photography</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <h3 class="text-xl font-semibold text-purple-400 mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-chart-bar"></i> Professional Attributes
+                    </h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between items-center mb-1 text-sm">
+                                <span class="text-slate-300 font-medium">Communication</span>
+                                <span class="text-cyan-400 font-mono font-bold">90%</span>
+                            </div>
+                            <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-cyan-400 to-cyan-500 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center mb-1 text-sm">
+                                <span class="text-slate-300 font-medium">Teamwork</span>
+                                <span class="text-cyan-400 font-mono font-bold">90%</span>
+                            </div>
+                            <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-cyan-400 to-cyan-500 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center mb-1 text-sm">
+                                <span class="text-slate-300 font-medium">Creativity & Design Thinking</span>
+                                <span class="text-purple-400 font-mono font-bold">85%</span>
+                            </div>
+                            <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-purple-400 to-purple-500 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center mb-1 text-sm">
+                                <span class="text-slate-300 font-medium">Problem Solving</span>
+                                <span class="text-purple-400 font-mono font-bold">75%</span>
+                            </div>
+                            <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-purple-400 to-purple-500 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="py-24 relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Featured Work</h2>
+            <div class="h-1 w-20 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="glass rounded-2xl overflow-hidden border border-white/5 flex flex-col justify-between group hover:border-cyan-500/30 transition-all duration-300 hover:scale-[1.02]">
+                <div>
+                    <div class="h-48 bg-slate-900 flex items-center justify-center relative overflow-hidden border-b border-white/5">
+                        <i class="fa-solid fa-code-merge text-5xl text-slate-700 group-hover:text-cyan-400 transition-colors duration-300"></i>
+                        <span class="absolute top-3 right-3 bg-cyan-500/10 text-cyan-400 text-xs px-2.5 py-1 rounded-full border border-cyan-500/20 font-medium flex items-center gap-1">
+                            <i class="fa-solid fa-code text-[10px]"></i> Live Profile Connected
+                        </span>
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <h3 class="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">LeetCode Algorithm Dashboard</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            A track record repository tracing complex algorithms, discrete math processes, and active optimized runtime benchmarks.
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span class="text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded-md font-mono">Java Core</span>
+                            <span class="text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded-md font-mono">Data Structures</span>
+                            <span class="text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded-md font-mono">LeetCode</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6 pt-0 grid grid-cols-2 gap-4">
+                    <a href="https://github.com/techwith-trishhhhh" target="_blank" class="glass text-center py-2 text-xs font-semibold rounded-lg text-white hover:bg-white/10 border border-white/10 transition flex items-center justify-center gap-1">
+                        <i class="fa-brands fa-github"></i> GitHub
+                    </a>
+                    <a href="https://leetcode.com/u/CodeWithTrixx/" target="_blank" class="bg-cyan-500 text-center py-2 text-xs font-semibold rounded-lg text-slate-900 hover:bg-cyan-400 transition shadow flex items-center justify-center gap-1">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Profile
+                    </a>
+                </div>
+            </div>
+
+            <div class="glass rounded-2xl overflow-hidden border border-white/5 flex flex-col justify-between group hover:border-cyan-500/30 transition-all duration-300 hover:scale-[1.02]">
+                <div>
+                    <div class="h-48 bg-slate-900 flex items-center justify-center relative overflow-hidden border-b border-white/5">
+                        <i class="fa-brands fa-java text-5xl text-slate-700 group-hover:text-cyan-400 transition-colors duration-300"></i>
+                        <span class="absolute top-3 right-3 bg-cyan-500/10 text-cyan-400 text-xs px-2.5 py-1 rounded-full border border-cyan-500/20 font-medium flex items-center gap-1">
+                            <i class="fa-solid fa-code text-[10px]"></i> Live Profile Connected
+                        </span>
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <h3 class="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">Java Algo Optimizer</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            A structural engineering repository built purely in Java executing complex logical matrix systems and tracking optimized data paths.
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span class="text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded-md font-mono">Java Core</span>
+                            <span class="text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded-md font-mono">DSA Matrix</span>
+                            <span class="text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded-md font-mono">Algorithms</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6 pt-0 grid grid-cols-2 gap-4">
+                    <a href="https://github.com/techwith-trishhhhh" class="glass text-center py-2 text-xs font-semibold rounded-lg text-white hover:bg-white/10 border border-white/10 transition flex items-center justify-center gap-1">
+                        <i class="fa-brands fa-github"></i> GitHub
+                    </a>
+                    <a href="https://github.com/techwith-trishhhhh" class="bg-cyan-500 text-center py-2 text-xs font-semibold rounded-lg text-slate-900 hover:bg-cyan-400 transition shadow flex items-center justify-center gap-1">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                    </a>
+                </div>
+            </div>
+
+            <div class="glass rounded-2xl overflow-hidden border border-white/5 flex flex-col justify-between group hover:border-purple-500/30 transition-all duration-300 hover:scale-[1.02]">
+                <div>
+                    <div class="h-48 bg-slate-900 flex items-center justify-center relative overflow-hidden border-b border-white/5">
+                        <i class="fa-solid fa-clapperboard text-5xl text-slate-700 group-hover:text-purple-400 transition-colors duration-300"></i>
+                        <span class="absolute top-3 right-3 bg-purple-500/10 text-purple-400 text-xs px-2.5 py-1 rounded-full border border-purple-500/20 font-medium flex items-center gap-1">
+                            <i class="fa-solid fa-code text-[10px]"></i> Live Profile Connected
+                        </span>
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <h3 class="text-xl font-bold text-white group-hover:text-purple-400 transition-colors">Creative Production Engine</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            A clean showcase system presenting complex structural video sequencing layers, frame tuning, and digital design templates.
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span class="text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded-md font-mono">Video Production</span>
+                            <span class="text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded-md font-mono">Photography</span>
+                            <span class="text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded-md font-mono">Art</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6 pt-0 grid grid-cols-2 gap-4">
+                    <a href="https://www.instagram.com/ms.trishhhhh?igsh=MWQ1OHVkZjExd3V1" class="glass text-center py-2 text-xs font-semibold rounded-lg text-white hover:bg-white/10 border border-white/10 transition flex items-center justify-center gap-1">
+                        <i class="fa-brands fa-github"></i> GitHub
+                    </a>
+                    <a href="https://www.instagram.com/ms.trishhhhh?igsh=MWQ1OHVkZjExd3V1" class="bg-purple-500 text-center py-2 text-xs font-semibold rounded-lg text-white hover:bg-purple-400 transition shadow flex items-center justify-center gap-1">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Show Work
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section Starts -->
+<section id="certificates" class="py-20 bg-slate-950 text-white min-h-screen flex items-center">
+    <div class="container mx-auto px-6 md:px-12 lg:px-24">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-12 items-start">
+            
+            <!-- Left Side: Interactive Navigation Tabs -->
+            <div class="lg:col-span-1 space-y-6 lg:sticky lg:top-28">
+                <h2 class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 tracking-tight">
+                    Why Hire Me?
+                </h2>
+                <p class="text-slate-400 text-sm leading-relaxed">
+    As an Information Technology student with a strong foundation in Java, Data Structures, and Algorithms, I bridge the gap between complex logical backend systems and creative, modern frontend development. My technical expertise is validated through hands-on full-stack projects, real-world coding challenges, and professional certifications. 
+</p>
+<p class="text-slate-400 text-sm leading-relaxed mt-3">
+    Beyond writing clean and optimized code, I bring a unique edge of creativity, deep problem-solving abilities, and strong communication skills to any team. Explore my verified achievements, technical skills, and projects below to see how I can add immediate value to your next big vision.
+</p>
+                
+                <!-- Navigation Buttons (As shown in your screenshot) -->
+                <div class="flex flex-col gap-3 max-w-[200px]">
+                    <a href="#skills" class="px-5 py-2.5 rounded-lg border border-cyan-500/30 text-cyan-400 text-center text-sm font-semibold hover:bg-cyan-500/10 transition-all duration-300 shadow-[0_0_15px_rgba(6,182,212,0.1)]">
+                        Skills
+                    </a>
+                    <a href="#projects" class="px-5 py-2.5 rounded-lg border border-cyan-500/30 text-cyan-400 text-center text-sm font-semibold hover:bg-cyan-500/10 transition-all duration-300 shadow-[0_0_15px_rgba(6,182,212,0.1)]">
+                        Projects
+                    </a>
+                    <a href="#certificates" class="px-5 py-2.5 rounded-lg bg-cyan-500/20 border-2 border-cyan-400 text-cyan-300 text-center text-sm font-bold tracking-wide transition-all duration-300 shadow-[0_0_20px_rgba(6,182,212,0.3)]">
+                        Certificate
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Side: Certificates Showcase Grid -->
+            <div class="lg:col-span-3 space-y-6">
+                <h3 class="text-2xl font-bold text-cyan-400 flex items-center gap-2">
+                    <span class="h-2 w-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                    My Certificates
+                </h3>
+                
+                <!-- Certificate Grid Layout -->
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+    
+    <div onclick="openCertificateModal('assets/certificates/asset 0.jpeg')" class="group relative bg-slate-900/60 border border-cyan-500/30 rounded-xl p-4 flex flex-col justify-between transition-all duration-300 hover:border-cyan-400 hover:shadow-[0_0_30px_rgba(6,182,212,0.25)] hover:-translate-y-1 cursor-pointer">
+        <div class="w-full aspect-[4/3] rounded-lg overflow-hidden bg-slate-800 flex items-center justify-center border border-slate-700">
+            <img src="assets/certificates/asset 0.jpeg" alt="Envisage Hackathon Certificate" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+        </div>
+        <p class="text-slate-300 text-xs font-medium text-center mt-4 leading-relaxed group-hover:text-white transition-colors">
+            This is my participation certificate in QUIZZ BIZZ conducted by IIC TMSL.
+        </p>
+    </div>
+
+    <div onclick="openCertificateModal('assets/certificates/asset 1.png')" class="group relative bg-slate-900/60 border border-cyan-500/30 rounded-xl p-4 flex flex-col justify-between transition-all duration-300 hover:border-cyan-400 hover:shadow-[0_0_30px_rgba(6,182,212,0.25)] hover:-translate-y-1 cursor-pointer">
+        <div class="w-full aspect-[4/3] rounded-lg overflow-hidden bg-slate-800 flex items-center justify-center border border-slate-700">
+            <img src="assets/certificates/asset 1.png" alt="Coding Legion Certificate" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+        </div>
+        <p class="text-slate-300 text-xs font-medium text-center mt-4 leading-relaxed group-hover:text-white transition-colors">
+            This is my Ethical Hacker course completion certificate.
+        </p>
+    </div>
+
+    <div onclick="openCertificateModal('assets/certificates/asset 2.png')" class="group relative bg-slate-900/60 border border-cyan-500/30 rounded-xl p-4 flex flex-col justify-between transition-all duration-300 hover:border-cyan-400 hover:shadow-[0_0_30px_rgba(6,182,212,0.25)] hover:-translate-y-1 cursor-pointer">
+        <div class="w-full aspect-[4/3] rounded-lg overflow-hidden bg-slate-800 flex items-center justify-center border border-slate-700">
+            <img src="assets/certificates/asset 2.png" alt="Code Alpha Internship Certificate" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+        </div>
+        <p class="text-slate-300 text-xs font-medium text-center mt-4 leading-relaxed group-hover:text-white transition-colors">
+            This is my first participation certificate on VIDEO EDITING event under COC 2025 organized by SAMARTH TMSL.
+        </p>
+    </div>
+
+    <div onclick="openCertificateModal('assets/certificates/asset 3.png')" class="group relative bg-slate-900/60 border border-cyan-500/30 rounded-xl p-4 flex flex-col justify-between transition-all duration-300 hover:border-cyan-400 hover:shadow-[0_0_30px_rgba(6,182,212,0.25)] hover:-translate-y-1 cursor-pointer">
+        <div class="w-full aspect-[4/3] rounded-lg overflow-hidden bg-slate-800 flex items-center justify-center border border-slate-700">
+            <img src="assets/certificates/asset 3.png" alt="Code Alpha Internship Certificate" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+        </div>
+        <p class="text-slate-300 text-xs font-medium text-center mt-4 leading-relaxed group-hover:text-white transition-colors">
+            This is my course completion certificate of Fundamentals of Digital Marketing by Google Digital Garage.
+        </p>
+    </div>
+
+    <div onclick="openCertificateModal('assets/certificates/asset 4.png')" class="group relative bg-slate-900/60 border border-cyan-500/30 rounded-xl p-4 flex flex-col justify-between transition-all duration-300 hover:border-cyan-400 hover:shadow-[0_0_30px_rgba(6,182,212,0.25)] hover:-translate-y-1 cursor-pointer">
+        <div class="w-full aspect-[4/3] rounded-lg overflow-hidden bg-slate-800 flex items-center justify-center border border-slate-700">
+            <img src="assets/certificates/asset 4.png" alt="Envisage Hackathon Certificate" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+        </div>
+        <p class="text-slate-300 text-xs font-medium text-center mt-4 leading-relaxed group-hover:text-white transition-colors">
+            This is my participation certificate in the Hacktoberfest & Open Source Workshop organised by SAMARTH TMSL.
+        </p>
+    </div>
+
+    <div onclick="openCertificateModal('assets/certificates/asset 5.png')" class="group relative bg-slate-900/60 border border-cyan-500/30 rounded-xl p-4 flex flex-col justify-between transition-all duration-300 hover:border-cyan-400 hover:shadow-[0_0_30px_rgba(6,182,212,0.25)] hover:-translate-y-1 cursor-pointer">
+        <div class="w-full aspect-[4/3] rounded-lg overflow-hidden bg-slate-800 flex items-center justify-center border border-slate-700">
+            <img src="assets/certificates/asset 5.png" alt="Envisage Hackathon Certificate" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+        </div>
+        <p class="text-slate-300 text-xs font-medium text-center mt-4 leading-relaxed group-hover:text-white transition-colors">
+            This is my participation certificate in the Linkedin and Resume Building Workshop organised by SAMARTH TMSL.
+        </p>
+    </div>
+
+</div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!-- Certificates Section Ends -->
+
+    <!-- CONTACT & FOOTER SECTION -->
+    <section id="contact" class="py-24 relative z-10 glass border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Get In Touch</h2>
+                <div class="h-1 w-20 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                <div class="lg:col-span-5 space-y-6">
+                    <h3 class="text-xl font-semibold text-white">Let's build something beautiful together.</h3>
+                    <p class="text-slate-400 leading-relaxed">
+                        Whether you want to discuss algorithmic optimizations, a full-stack project, video editing jobs, or just want to chat about music and design—drop me a line!
+                    </p>
+                    
+                    <div class="space-y-4 pt-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl glass border border-white/10 flex items-center justify-center text-cyan-400 text-lg">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-slate-500 block uppercase tracking-wider">Email Me</span>
+                                <a href="mailto:abc@gmail.com" class="text-white hover:text-cyan-400 transition">trishnikamondal30@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl glass border border-white/10 flex items-center justify-center text-purple-400 text-lg">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-slate-500 block uppercase tracking-wider">Call Me</span>
+                                <a href="tel:1234567890" class="text-white hover:text-purple-400 transition">+91 9046734247</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4 pt-6">
+                        <a href="https://github.com/techwith-trishhhhh" class="w-10 h-10 rounded-lg glass border border-white/10 flex items-center justify-center text-slate-300 hover:text-cyan-400 hover:scale-110 transition-all">
+                            <i class="fa-brands fa-github text-lg"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/trishnika-mondal-a43185387/" class="w-10 h-10 rounded-lg glass border border-white/10 flex items-center justify-center text-slate-300 hover:text-cyan-400 hover:scale-110 transition-all">
+                            <i class="fa-brands fa-linkedin-in text-lg"></i>
+                        </a>
+                        <a href="https://www.instagram.com/ms.trishhhhh?igsh=MWQ1OHVkZjExd3V1" class="w-10 h-10 rounded-lg glass border border-white/10 flex items-center justify-center text-slate-300 hover:text-purple-400 hover:scale-110 transition-all">
+                            <i class="fa-brands fa-instagram text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 glass p-6 sm:p-8 rounded-2xl border border-white/5">
+                    <form id="contact-form" class="space-y-5" onsubmit="event.preventDefault(); alert('Message feature placeholder trigger!');">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="space-y-1.5">
+                                <label for="name" class="text-xs font-medium text-slate-400 tracking-wide uppercase">Your Name</label>
+                                <input type="text" id="name" required class="w-full bg-slate-900/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-500 font-sm transition">
+                            </div>
+                            <div class="space-y-1.5">
+                                <label for="email" class="text-xs font-medium text-slate-400 tracking-wide uppercase">Email Address</label>
+                                <input type="email" id="email" placeholder="e.g. abc@gmail.com" required class="w-full bg-slate-900/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-500 font-sm transition">
+                            </div>
+                            <div class="space-y-1.5">
+                                <label for="user-phone" class="text-xs font-medium text-slate-400 tracking-wide uppercase">Contact Number</label>
+                                <input type="tel" id="user-phone" placeholder="e.g. +91 XXXXX XXXXX" class="w-full bg-slate-900/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-500 text-sm transition">
+                            </div>
+                        </div>
+                        <div class="space-y-1.5">
+                            <label for="message" class="text-xs font-medium text-slate-400 tracking-wide uppercase">Your Message</label>
+                            <textarea id="message" rows="4" required class="w-full bg-slate-900/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-500 font-sm transition resize-none"></textarea>
+                        </div>
+                        <button type="submit" class="w-full sm:w-auto px-8 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-semibold transition shadow-lg flex items-center justify-center gap-2 cursor-pointer group">
+                            <span>Send Message</span>
+                            <i class="fa-solid fa-paper-plane text-xs group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="mt-20 pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs sm:text-sm text-slate-500">
+                <p>&copy; 2026 Trishnika Mondal. All rights reserved.</p>
+                <a href="#home" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg glass border border-white/5 text-slate-300 hover:text-cyan-400 transition-all duration-300">
+                    <span>Back to Top</span>
+                    <i class="fa-solid fa-arrow-up text-xs"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Link to external custom JavaScript -->
+    <script src="script.js" defer></script>
+    <div id="certificateModal" onclick="closeCertificateModal()" class="fixed inset-0 z-[9999] hidden bg-black/90 backdrop-blur-md flex items-center justify-center p-4 transition-all duration-300 opacity-0">
+        <button onclick="closeCertificateModal()" class="absolute top-6 right-6 text-white hover:text-cyan-400 text-5xl transition-colors font-sans pointer-events-auto">
+            &times;
+        </button>
+        
+        <div class="relative max-w-4xl max-h-[85vh] w-full flex items-center justify-center" onclick="event.stopPropagation()">
+            <img id="modalImage" src="" alt="Certificate Large View" class="max-w-full max-h-[85vh] rounded-lg shadow-[0_0_50px_rgba(6,182,212,0.4)] object-contain transform scale-95 transition-transform duration-300">
+        </div>
+    </div>
+
+    <script>
+        function openCertificateModal(imageSrc) {
+            var modal = document.getElementById('certificateModal');
+            var modalImg = document.getElementById('modalImage');
+            
+            modalImg.src = imageSrc;
+            modal.classList.remove('hidden');
+            
+            setTimeout(function() {
+                modal.classList.remove('opacity-0');
+                modalImg.classList.remove('scale-95');
+                modalImg.classList.add('scale-100');
+            }, 20);
+        }
+
+        function closeCertificateModal() {
+            var modal = document.getElementById('certificateModal');
+            var modalImg = document.getElementById('modalImage');
+            
+            modal.classList.add('opacity-0');
+            modalImg.classList.remove('scale-100');
+            modalImg.classList.add('scale-95');
+            
+            setTimeout(function() {
+                modal.classList.add('hidden');
+            }, 300);
+        }
+    </script>
+</body>
+</html>
